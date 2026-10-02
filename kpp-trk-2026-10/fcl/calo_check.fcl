@@ -1,0 +1,8 @@
+# Calo decoder only, with its diagnostic on: prints "found no Calorimeter decoders!"
+# for every event that has no calorimeter subsystem data.
+#include "kpp_trk_pass1.fcl"
+physics.producers.CaloDigis.diagLevel : 1
+physics.CaloCheck : [ CaloDigis ]
+physics.trigger_paths : [ CaloCheck ]
+physics.end_paths : [ ]
+outputs : {}

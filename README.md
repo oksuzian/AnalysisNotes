@@ -7,6 +7,7 @@ Each Mu2e analysis note here sits in its own folder, together with everything ne
 | note | topic | data |
 |---|---|---|
 | [kpp-cosmics-2026-10](kpp-cosmics-2026-10/) | KPP cosmic run: timing, calorimeter and CRV positions, Michel decays (reproduces DocDB 58468) | runs 123680, 123681 |
+| [kpp-trk-2026-10](kpp-trk-2026-10/) | KPP `kpp_trk` runs: processing with PassN (three stopgaps, tracker addressing check), tracker-CRV timing and positions | runs 124984, 124986, 124989 |
 
 Run 1A and Run 1B notes will follow.
 

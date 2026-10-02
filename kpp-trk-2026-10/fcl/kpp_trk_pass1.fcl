@@ -1,0 +1,19 @@
+# Combined tracker+calo+CRV pass1 for raw.mu2e.cosmics.kpp_trk (runs 124984, 124986, 124989).
+# PassN#21 Combined_Pass1.fcl plus three stopgaps; see README "Stopgaps".
+#include "PassN/Combined_Pass1.fcl"
+
+# 1. CRV_COMMISSIONING v1_0 has no CRV constants past run 123913:
+#    use the nearest PRECEDING run's (run 123913).
+services.DbService.nearestMatch : true
+
+# 2. PassN#21 tracker tables are per run (123660, 123680 only). scripts/kpp_trk_reco.sh
+#    writes a copy with the run-123680 tables relabelled to runs 124000-129999.
+services.DbService.textFile : [
+  "Offline/TrackerConditions/data/TrkPanelMap.txt",
+  "kpp-trk-2026-10/trackercalibrations_kpp_trk.txt",
+  "Offline/CaloConditions/data/EnergyCalib_example.txt",
+  "Offline/CaloConditions/data/TimeCalib_example.txt" ]
+
+# 3. Every kpp_trk tracker fragment has source_dtc_id = 0, which TrkPanelMap does not
+#    list; byLink drops every hit. Map hits by the panel MnID in the hit payload instead.
+physics.producers.makeSD.addressing : "byMnid"

@@ -1,0 +1,204 @@
+{
+ "files": [
+  "nts.root"
+ ],
+ "runs": [
+  124989
+ ],
+ "events": 60771,
+ "counts": {
+  "trk": {
+   "events_with_entries": 17516,
+   "entries": 17820
+  },
+  "crvcoincs": {
+   "events_with_entries": 12943,
+   "entries": 24519
+  },
+  "crvpulses": {
+   "events_with_entries": 31127,
+   "entries": 895987
+  },
+  "crvdigis": {
+   "events_with_entries": 31145,
+   "entries": 7544616
+  },
+  "calohits": {
+   "events_with_entries": 0,
+   "entries": 0
+  },
+  "caloclusters": {
+   "events_with_entries": 0,
+   "entries": 0
+  },
+  "trk_nactive_ge_10": {
+   "events_with_entries": 13596,
+   "entries": 13691
+  }
+ },
+ "skipped": [
+  "calorimeter sections of kpp_cosmic_plots.py: no calorimeter data in kpp_trk"
+ ],
+ "rates_vs_subrun": {
+  "124989": {
+   "subruns": [
+    1,
+    21
+   ],
+   "n_subruns": 21,
+   "track_fraction_min_max": [
+    0.21085080147965474,
+    0.23641954219337205
+   ],
+   "crv_fraction_median": 0.38485158648925283,
+   "crv_fraction_min_max": [
+    0.0,
+    0.4075829383886256
+   ],
+   "subruns_with_crv_below_half_median": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ]
+  }
+ },
+ "good_tracks": 13691,
+ "crv": {
+  "sectors": {
+   "1": {
+    "pairs": 4267,
+    "dt_peak_ns": 558.0295654294168,
+    "peak_over_median": 1600.0,
+    "in_time": 1895,
+    "precise": "Z",
+    "robust_width_x_mm": 461.0775148864746,
+    "robust_width_z_mm": 74.94984594726562
+   },
+   "2": {
+    "pairs": 889,
+    "dt_peak_ns": 548.2420557720288,
+    "peak_over_median": 285.0,
+    "in_time": 477,
+    "precise": "X",
+    "robust_width_x_mm": 309.1660784912109,
+    "robust_width_z_mm": 902.7636823242187
+   },
+   "3": {
+    "pairs": 1132,
+    "dt_peak_ns": 558.6942286415142,
+    "peak_over_median": 476.0,
+    "in_time": 547,
+    "precise": "Z",
+    "robust_width_x_mm": 496.85985413818355,
+    "robust_width_z_mm": 70.66800593261718
+   },
+   "4": {
+    "pairs": 377,
+    "dt_peak_ns": 547.546668238967,
+    "peak_over_median": 112.0,
+    "in_time": 194,
+    "precise": "X",
+    "robust_width_x_mm": 348.1289177947998,
+    "robust_width_z_mm": 864.1247771850585
+   }
+  },
+  "fit_X": {
+   "n": 539,
+   "mean": -7.952717013042653,
+   "sigma": 103.97398541613862,
+   "mean_err": 7.200376030280163,
+   "sigma_err": 6.748749135625273
+  },
+  "fit_Z": {
+   "n": 2328,
+   "mean": 1223.6585930148049,
+   "sigma": 62.80003043666977,
+   "mean_err": 2.6841988827508194,
+   "sigma_err": 2.403360626464789
+  }
+ },
+ "timing": {
+  "T(CRV)-T(trk)": {
+   "n": 3113,
+   "mean": 555.8393245913467,
+   "sigma": 12.545088403041436,
+   "mean_err": 0.5504186940261322,
+   "sigma_err": 0.4209373503457133,
+   "p5_p95_ns": [
+    533.9068676890995,
+    579.2499895388944
+   ]
+  }
+ },
+ "crv_timing_two_peaks": {
+  "1": {
+   "n": 1895,
+   "peak1_ns": 555.9697215182836,
+   "peak1_err": 0.42786357003532205,
+   "sigma1_ns": 5.8446465606632705,
+   "peak2_ns": 577.2545106956431,
+   "separation_ns": 21.2847891773596,
+   "separation_err": 0.6212646197648324,
+   "sigma2_ns": 3.8818063653393646,
+   "fraction_peak2": 0.2530408930134548,
+   "chi2": 240.4605226747353,
+   "ndf": 43
+  },
+  "2": {
+   "n": 477,
+   "peak1_ns": 544.9845983399988,
+   "peak1_err": 0.8208714251280012,
+   "sigma1_ns": 9.325739419781604,
+   "peak2_ns": 566.0041393589298,
+   "separation_ns": 21.01954101893101,
+   "separation_err": 0.7781023533579764,
+   "sigma2_ns": 4.429357253070786,
+   "fraction_peak2": 0.19628337643740226,
+   "chi2": 40.59905191138196,
+   "ndf": 43
+  },
+  "3": {
+   "n": 547,
+   "peak1_ns": 555.2679051812148,
+   "peak1_err": 0.38046032899627025,
+   "sigma1_ns": 5.042174971486179,
+   "peak2_ns": 575.5978981204721,
+   "separation_ns": 20.329992939257295,
+   "separation_err": 0.5750192562240443,
+   "sigma2_ns": 4.279199287137564,
+   "fraction_peak2": 0.31121977834637615,
+   "chi2": 63.886721618000514,
+   "ndf": 43
+  },
+  "4": {
+   "n": 194,
+   "peak1_ns": 546.4097523024282,
+   "peak1_err": 0.6140047851032174,
+   "sigma1_ns": 6.242735140417584,
+   "peak2_ns": 568.0536318303003,
+   "separation_ns": 21.643879527872215,
+   "separation_err": 0.8525309945644197,
+   "sigma2_ns": 3.5639468720213987,
+   "fraction_peak2": 0.2558769345195655,
+   "chi2": 37.66116080585977,
+   "ndf": 43
+  }
+ },
+ "late_fraction_by_subrun": {
+  "subruns": 12,
+  "mean": 0.27085705226036844,
+  "rms": 0.05278517270717844,
+  "rms_expected_from_statistics": 0.03355744244661255,
+  "min_max": [
+   0.125,
+   0.3218390804597701
+  ]
+ }
+}

@@ -1,0 +1,5 @@
+# EventNtuple from Combined_Pass1 output, with CRV reco pulses added
+# (same as kpp-cosmics-2026-10/fcl/nts_combined_crvpulses.fcl).
+#include "PassN/from_mcs-combined.fcl"
+physics.analyzers.EventNtuple.crv.fillPulses : true
+physics.analyzers.EventNtuple.crv.keepUnclusteredPulses : true

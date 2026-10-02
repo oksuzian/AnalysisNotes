@@ -1,0 +1,193 @@
+{
+ "files": [
+  "nts.root"
+ ],
+ "runs": [
+  124986
+ ],
+ "events": 453816,
+ "counts": {
+  "trk": {
+   "events_with_entries": 128781,
+   "entries": 130743
+  },
+  "crvcoincs": {
+   "events_with_entries": 181383,
+   "entries": 344203
+  },
+  "crvpulses": {
+   "events_with_entries": 432990,
+   "entries": 12035282
+  },
+  "crvdigis": {
+   "events_with_entries": 433170,
+   "entries": 101366316
+  },
+  "calohits": {
+   "events_with_entries": 0,
+   "entries": 0
+  },
+  "caloclusters": {
+   "events_with_entries": 0,
+   "entries": 0
+  },
+  "trk_nactive_ge_10": {
+   "events_with_entries": 101492,
+   "entries": 102174
+  }
+ },
+ "skipped": [
+  "calorimeter sections of kpp_cosmic_plots.py: no calorimeter data in kpp_trk"
+ ],
+ "rates_vs_subrun": {
+  "124986": {
+   "subruns": [
+    1,
+    155
+   ],
+   "n_subruns": 155,
+   "track_fraction_min_max": [
+    0.18333333333333332,
+    0.2470978441127695
+   ],
+   "crv_fraction_median": 0.3997365821534409,
+   "crv_fraction_min_max": [
+    0.37830599263475057,
+    0.42255389718076286
+   ],
+   "subruns_with_crv_below_half_median": []
+  }
+ },
+ "good_tracks": 102172,
+ "crv": {
+  "sectors": {
+   "1": {
+    "pairs": 59982,
+    "dt_peak_ns": 566.8452202999688,
+    "peak_over_median": 2883.875,
+    "in_time": 24698,
+    "precise": "Z",
+    "robust_width_x_mm": 568.7425622863769,
+    "robust_width_z_mm": 71.07639056396484
+   },
+   "2": {
+    "pairs": 12667,
+    "dt_peak_ns": 556.3817674200982,
+    "peak_over_median": 2061.0,
+    "in_time": 6349,
+    "precise": "X",
+    "robust_width_x_mm": 242.53902626953123,
+    "robust_width_z_mm": 843.0200783935546
+   },
+   "3": {
+    "pairs": 16641,
+    "dt_peak_ns": 568.9342964501047,
+    "peak_over_median": 3605.0,
+    "in_time": 7575,
+    "precise": "Z",
+    "robust_width_x_mm": 376.33892550659175,
+    "robust_width_z_mm": 62.474975903320306
+   },
+   "4": {
+    "pairs": 5365,
+    "dt_peak_ns": 553.5698724947433,
+    "peak_over_median": 1453.0,
+    "in_time": 2392,
+    "precise": "X",
+    "robust_width_x_mm": 261.3622277160644,
+    "robust_width_z_mm": 809.2350956176757
+   }
+  },
+  "fit_X": {
+   "n": 7077,
+   "mean": -18.505999673095666,
+   "sigma": 88.83827166956131,
+   "mean_err": 4.571409869444901,
+   "sigma_err": 4.41126309262384
+  },
+  "fit_Z": {
+   "n": 30826,
+   "mean": 1220.7686004954764,
+   "sigma": 60.704781721657895,
+   "mean_err": 2.359739766369764,
+   "sigma_err": 2.10111376778384
+  }
+ },
+ "timing": {
+  "T(CRV)-T(trk)": {
+   "n": 41014,
+   "mean": 562.757041873661,
+   "sigma": 12.394710977266193,
+   "mean_err": 0.7046069632279018,
+   "sigma_err": 0.37722667647355435,
+   "p5_p95_ns": [
+    541.9965509865663,
+    584.6192661749672
+   ]
+  }
+ },
+ "crv_timing_two_peaks": {
+  "1": {
+   "n": 24698,
+   "peak1_ns": 557.3955227194127,
+   "peak1_err": 0.48949721075637487,
+   "sigma1_ns": 5.946313700990572,
+   "peak2_ns": 578.9584421761404,
+   "separation_ns": 21.56291945672757,
+   "separation_err": 0.5261115729553194,
+   "sigma2_ns": 4.66516080562529,
+   "fraction_peak2": 0.5202026778819664,
+   "chi2": 2181.322170907974,
+   "ndf": 43
+  },
+  "2": {
+   "n": 6349,
+   "peak1_ns": 546.0482554230491,
+   "peak1_err": 0.3975197020556272,
+   "sigma1_ns": 7.4202826843113545,
+   "peak2_ns": 567.9609882671117,
+   "separation_ns": 21.912732844062553,
+   "separation_err": 0.3631531154637943,
+   "sigma2_ns": 4.863510166213265,
+   "fraction_peak2": 0.5039936043046664,
+   "chi2": 183.7275112721683,
+   "ndf": 43
+  },
+  "3": {
+   "n": 7575,
+   "peak1_ns": 555.6632557022156,
+   "peak1_err": 0.27872972826226855,
+   "sigma1_ns": 4.6087503962354965,
+   "peak2_ns": 577.9299915107123,
+   "separation_ns": 22.26673580849677,
+   "separation_err": 0.33390517030777733,
+   "sigma2_ns": 3.54365438452998,
+   "fraction_peak2": 0.5470130704574052,
+   "chi2": 473.9381203731534,
+   "ndf": 43
+  },
+  "4": {
+   "n": 2392,
+   "peak1_ns": 546.6224292441809,
+   "peak1_err": 0.3768700958517555,
+   "sigma1_ns": 5.916599071885868,
+   "peak2_ns": 568.982812744768,
+   "separation_ns": 22.360383500587098,
+   "separation_err": 0.43669973240459864,
+   "sigma2_ns": 4.610268929883565,
+   "fraction_peak2": 0.48588269101234455,
+   "chi2": 157.6460386845076,
+   "ndf": 43
+  }
+ },
+ "late_fraction_by_subrun": {
+  "subruns": 155,
+  "mean": 0.524906345645172,
+  "rms": 0.04658341339845523,
+  "rms_expected_from_statistics": 0.031162022347908786,
+  "min_max": [
+   0.28,
+   0.6283524904214559
+  ]
+ }
+}

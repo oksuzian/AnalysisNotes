@@ -1,0 +1,9 @@
+# Decode-only job for the addressing A/B: the tracker decoder exactly as PassN#21
+# configures it (addressing byLink, onMissingRow skip), and every StrawDigi printed.
+#include "PassN/Combined_Pass1.fcl"
+physics.analyzers.printSD : { module_type : PrintModule  verbose : 1  strawDigiPrinter : { verbose : 1 } }
+physics.DecodePath : [ makeSD ]
+physics.PrintEnd : [ printSD ]
+physics.trigger_paths : [ DecodePath ]
+physics.end_paths : [ PrintEnd ]
+outputs : {}

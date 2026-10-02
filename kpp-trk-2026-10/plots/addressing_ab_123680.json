@@ -1,0 +1,13 @@
+{
+ "file": "raw.mu2e.cosmics.kpp.123680_000001.art",
+ "events_bylink": 52468,
+ "events_bymnid": 52468,
+ "digis_bylink": 64570591,
+ "digis_bymnid": 64570591,
+ "events_identical": 52468,
+ "events_differing": 0,
+ "decoder_messages_bylink": 0,
+ "decoder_messages_bymnid": 0,
+ "control_events": 500,
+ "control_events_differing_from_bylink": 497
+}

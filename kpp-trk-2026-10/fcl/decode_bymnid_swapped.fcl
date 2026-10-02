@@ -1,0 +1,8 @@
+# Control: byMnid with a panel map whose first two rows of the last IoV have their
+# MnIDs swapped (written by scripts/addressing_ab.sh). The digests must change.
+#include "decode_bymnid.fcl"
+services.DbService.textFile : [
+  "kpp-trk-2026-10/TrkPanelMap_swapped.txt",
+  "PassN/Tracker/trackercalibrations.txt",
+  "Offline/CaloConditions/data/EnergyCalib_example.txt",
+  "Offline/CaloConditions/data/TimeCalib_example.txt" ]
