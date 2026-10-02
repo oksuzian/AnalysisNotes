@@ -1,0 +1,5 @@
+# EventNtuple from Combined_Pass1 output, with CRV reco pulses added.
+# The CRV settings are the ones PassN/CRV/CrvPass1_extracted_eventntuples.fcl uses.
+#include "PassN/from_mcs-combined.fcl"
+physics.analyzers.EventNtuple.crv.fillPulses : true
+physics.analyzers.EventNtuple.crv.keepUnclusteredPulses : true

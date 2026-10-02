@@ -1,0 +1,163 @@
+{
+ "files": [
+  "/exp/mu2e/data/users/oksuzian/claude-scratch/kpp_reco_test/recipe_check/run123680/nts.root"
+ ],
+ "runs": [
+  123680
+ ],
+ "events": 52468,
+ "branch_groups": [
+  "trk",
+  "calo",
+  "crv"
+ ],
+ "skipped": [],
+ "good_tracks": 11349,
+ "disk_frame_offset_mm": {
+  "0": [
+   0.0,
+   0.0,
+   1744.8900146484375
+  ],
+  "1": [
+   0.0,
+   0.0,
+   2444.889892578125
+  ]
+ },
+ "calo_minus_trk_peak_ns": {
+  "value": 1222.5720694940865,
+  "peak_over_median": 153.5
+ },
+ "disks": {
+  "0": {
+   "z_shift_mm": 634.7549980323241,
+   "scan_best_mm": 625,
+   "scan_matches": 2316,
+   "scan_matches_at_nominal": 23,
+   "slope_x_after_scan_mm": -11.07094306382378,
+   "slope_y_after_scan_mm": -8.439053000824561,
+   "matched_pairs": 2759,
+   "resid_x": {
+    "n": 3267,
+    "mean": -1.7024371830984362,
+    "sigma": 23.542462766811887,
+    "mean_err": 0.96038850864802,
+    "sigma_err": 0.8085723222845543
+   },
+   "resid_y": {
+    "n": 3267,
+    "mean": -0.8399790529009548,
+    "sigma": 40.253136503001166,
+    "mean_err": 1.1692959367094649,
+    "sigma_err": 0.8998143355406655
+   }
+  },
+  "1": {
+   "z_shift_mm": 1090.8604348602873,
+   "scan_best_mm": 1100,
+   "scan_matches": 594,
+   "scan_matches_at_nominal": 6,
+   "slope_x_after_scan_mm": 9.287435974153007,
+   "slope_y_after_scan_mm": 8.991694305272459,
+   "matched_pairs": 637,
+   "resid_x": {
+    "n": 755,
+    "mean": -1.2853582021345407,
+    "sigma": 19.522872504420928,
+    "mean_err": 0.8048601481965806,
+    "sigma_err": 0.6353229716661529
+   },
+   "resid_y": {
+    "n": 755,
+    "mean": -1.6949638371586921,
+    "sigma": 25.70366978639438,
+    "mean_err": 1.0074375916355067,
+    "sigma_err": 0.7864305123638997
+   }
+  }
+ },
+ "crv": {
+  "sectors": {
+   "1": {
+    "pairs": 3390,
+    "dt_peak_ns": -32221.387259592884,
+    "peak_over_median": 7.0,
+    "in_time": 7,
+    "precise": null
+   },
+   "2": {
+    "pairs": 1003,
+    "dt_peak_ns": 522.5024008160108,
+    "peak_over_median": 243.0,
+    "in_time": 244,
+    "precise": "X",
+    "robust_width_x_mm": 225.48661515197753,
+    "robust_width_z_mm": 1088.9276218139648
+   },
+   "3": {
+    "pairs": 774,
+    "dt_peak_ns": -59514.074299703425,
+    "peak_over_median": 3.0,
+    "in_time": 3,
+    "precise": null
+   },
+   "4": {
+    "pairs": 384,
+    "dt_peak_ns": 522.244828475843,
+    "peak_over_median": 87.0,
+    "in_time": 89,
+    "precise": "X",
+    "robust_width_x_mm": 365.50157557983397,
+    "robust_width_z_mm": 838.5005192504882
+   }
+  },
+  "fit_X": {
+   "n": 259,
+   "mean": -13.509113996971854,
+   "sigma": 51.196233150695214,
+   "mean_err": 4.101421372726551,
+   "sigma_err": 3.60388540766427
+  },
+  "fit_Z": null
+ },
+ "triple_coincidence_events": 0,
+ "timing": {
+  "T(cal)-T(trk)": {
+   "n": 369,
+   "mean": 1557.2858334120801,
+   "sigma": 5.488802528623076,
+   "mean_err": 0.19183669625902805,
+   "sigma_err": 0.14864534538528426,
+   "p5_p95_ns": [
+    386.65764067794044,
+    1557.625945193301
+   ]
+  },
+  "T(CRV)-T(trk)": {
+   "n": 333,
+   "mean": 522.2255494601798,
+   "sigma": 8.607264290868757,
+   "mean_err": 0.21160812582190502,
+   "sigma_err": 0.1633612988253963,
+   "p5_p95_ns": [
+    508.6564404034667,
+    536.5599535772002
+   ]
+  },
+  "T(cal)-T(CRV)": {
+   "n": 0
+  }
+ },
+ "michel": {
+  "pairs": 516,
+  "tau_ns": 3812.5772551035607,
+  "tau_err_ns": 780.3976466846207,
+  "fit_range_ns": [
+   1000,
+   15000
+  ],
+  "pairs_dt_lt_100ns": 381,
+  "clusters_plotted": 135
+ }
+}

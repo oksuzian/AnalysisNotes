@@ -1,0 +1,40 @@
+{
+ "files": [
+  "/exp/mu2e/data/users/oksuzian/claude-scratch/kpp_reco_test/recipe_check/run123681/nts.root"
+ ],
+ "runs": [
+  123681
+ ],
+ "events": 232691,
+ "branch_groups": [
+  "calo"
+ ],
+ "skipped": [
+  "slides 6-8 and calo timing: need trk and calo branches",
+  "slide 10 and CRV timing: need trk and crv branches",
+  "slide 4: needs trk plus calo or crv branches"
+ ],
+ "disk_frame_offset_mm": {
+  "0": [
+   0.0,
+   0.0,
+   1744.8900146484375
+  ],
+  "1": [
+   0.0,
+   0.0,
+   2444.889892578125
+  ]
+ },
+ "michel": {
+  "pairs": 2320,
+  "tau_ns": 2322.3053315940274,
+  "tau_err_ns": 118.10001927706719,
+  "fit_range_ns": [
+   1000,
+   15000
+  ],
+  "pairs_dt_lt_100ns": 1551,
+  "clusters_plotted": 769
+ }
+}

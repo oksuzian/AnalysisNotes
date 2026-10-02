@@ -1,0 +1,4 @@
+*.art
+*.root
+*.log
+__pycache__/
