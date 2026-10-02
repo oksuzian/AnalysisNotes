@@ -1,0 +1,7 @@
+# EventNtuple for the combined pass1 output: every CRV reco pulse (clustered or not),
+# no CRV waveforms, no per-hit tracker branches (trk.nplanes carries what is needed).
+#include "PassN/from_mcs-combined.fcl"
+physics.analyzers.EventNtuple.crv.fillPulses : true
+physics.analyzers.EventNtuple.crv.keepUnclusteredPulses : true
+physics.analyzers.EventNtuple.crv.fillDigis : false
+physics.analyzers.EventNtuple.trk.fits[0].options.fillHits : false

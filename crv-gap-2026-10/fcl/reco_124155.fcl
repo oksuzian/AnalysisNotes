@@ -1,0 +1,17 @@
+# Combined pass1 (PassN#21, Combined_Pass1.fcl) for run 124155, raw.mu2e.trk.vst.
+# Three stopgaps, all approximate:
+#  1. CRV_COMMISSIONING v1_0 has no CRV calibration past run 123913: nearestMatch
+#     takes the constants of the nearest preceding run.
+#  2. PassN#21 has per-run tracker tables for runs 123660 and 123680 only.
+#     scripts/reco_124155.sh writes a copy with the 123680 tables relabelled to
+#     runs 124000-129999 (trackercalibrations_124xxx.txt, found on MU2E_SEARCH_PATH).
+#  3. Only events with a KinematicLine track are written (RecoPath ends in KLFilter):
+#     every efficiency here is per track.
+#include "PassN/Combined_Pass1.fcl"
+services.DbService.nearestMatch : true
+services.DbService.textFile : [
+  "Offline/TrackerConditions/data/TrkPanelMap.txt",
+  "trackercalibrations_124xxx.txt",
+  "Offline/CaloConditions/data/EnergyCalib_example.txt",
+  "Offline/CaloConditions/data/TimeCalib_example.txt" ]
+outputs.KinematicLineOutput.SelectEvents : [ RecoPath ]

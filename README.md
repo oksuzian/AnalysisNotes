@@ -8,6 +8,7 @@ Each Mu2e analysis note here sits in its own folder, together with everything ne
 |---|---|---|
 | [kpp-cosmics-2026-10](kpp-cosmics-2026-10/) | KPP cosmic run: timing, calorimeter and CRV positions, Michel decays (reproduces DocDB 58468) | runs 123680, 123681 |
 | [kpp-trk-2026-10](kpp-trk-2026-10/) | KPP `kpp_trk` runs: processing with PassN (three stopgaps, tracker addressing check), tracker-CRV timing and positions | runs 124984, 124986, 124989 |
+| [crv-gap-2026-10](crv-gap-2026-10/) | CRV module-gap inefficiency from tracks extrapolated to the EX sector, data vs MC (reproduces DocDB 57978) | run 124155; MDC2025au extracted-cosmic MC |
 
 Run 1A and Run 1B notes will follow.
 

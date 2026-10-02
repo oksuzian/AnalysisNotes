@@ -1,0 +1,31 @@
+# EventNtuple for the production extracted-cosmic MC (mcs.mu2e.CosmicCRYExtracted.*),
+# matched to the data configuration.
+#
+# The production mcs files keep only the CRV pulses that ended up in a coincidence
+# (SelectReco), which would make a pulse efficiency look worse than it is. They do
+# keep every CRV digi of the primary muon, so the pulses and the coincidences are
+# remade here from those digis, with the data's coincidence settings
+# (epilog_extracted: EX 3 of 4 layers, 8 PE; secondary pulses ignored).
+#include "Offline/CRVReco/fcl/prolog.fcl"
+#include "EventNtuple/fcl/from_mcs-extracted.fcl"
+
+physics.producers.CrvRecoPulses : @local::CrvRecoPulses
+physics.producers.CrvRecoPulses.crvDigiModuleLabel : "SelectReco"
+physics.producers.CrvCoincidenceClusterFinder : @local::CrvCoincidenceClusterFinder
+physics.producers.CrvCoincidenceClusterFinder.ignoreSecondaryPulses : true
+#include "Offline/CRVReco/fcl/epilog_extracted.fcl"
+physics.EventNtuplePath : [ CrvRecoPulses, CrvCoincidenceClusterFinder, @sequence::EventNtuple.PathExt ]
+
+physics.analyzers.EventNtuple.crv.recoPulsesTag : "CrvRecoPulses"
+physics.analyzers.EventNtuple.crv.coincidencesTag : "CrvCoincidenceClusterFinder"
+physics.analyzers.EventNtuple.crv.fillPulses : true
+physics.analyzers.EventNtuple.crv.keepUnclusteredPulses : true
+physics.analyzers.EventNtuple.crv.fillDigis : false
+# truth: where the cosmic muon crosses the inner face of EX
+physics.analyzers.EventNtuple.crv.planes : [ { sector : "EX" branchName : "ex" } ]
+# the production coincidence MC belongs to the production coincidences, not to these
+physics.analyzers.EventNtuple.crv.mc.coincidenceMCsTag : "noSuchProduct"
+physics.analyzers.EventNtuple.trk.fits[0].options.fillHits : false
+# remaking CRV pulses needs the CRV calibration the MC was made with
+services.DbService.purpose : "Sim_best"
+services.DbService.version : "v1_5"
