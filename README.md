@@ -27,6 +27,18 @@ Conventions:
 - **No ROOT or art files in the repo** (see `.gitignore`). Write down where the outputs live instead.
 - **Numbers in a README come from `summary.json`**, which the analysis code writes, not from copying values by hand.
 
+## Where to work
+
+Do not work in your home area (`$HOME`, nashome). It is small and shared, and a muse build alone does not fit there.
+
+| what | where | typical size |
+|---|---|---|
+| muse workdir (clones + build) | `/exp/mu2e/app/users/$USER/...` | about 4 GB per workdir |
+| outputs (art, ntuples, logs) | `/exp/mu2e/data/users/$USER/...` | 1-2 GB per run processed |
+| plots, summary.json | the note folder in this repo | under 1 MB |
+
+`/tmp` is not for outputs either. Raw files are read in place from `/pnfs` and never copied.
+
 ## Common setup
 
 ```bash

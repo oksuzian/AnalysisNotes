@@ -33,7 +33,8 @@ Calibrations:
 ## Recipe
 
 ```bash
-# 1. workdir (about 25 min to build with -j40)
+# 1. workdir in the app area, not in $HOME (about 4 GB; about 25 min to build with -j40)
+cd /exp/mu2e/app/users/$USER
 mkdir kppwork && cd kppwork
 source /cvmfs/mu2e.opensciencegrid.org/setupmu2e-art.sh
 git clone https://github.com/Mu2e/Offline
@@ -44,17 +45,25 @@ git clone https://github.com/Mu2e/EventNtuple
 git clone -b tracker https://github.com/bonventre/PassN      # until PassN#21 is merged
 muse setup && muse build -j40
 
+# this repo, also in the app area; steps 2-4 run from the note folder
+git clone https://github.com/oksuzian/AnalysisNotes /exp/mu2e/app/users/$USER/AnalysisNotes
+cd /exp/mu2e/app/users/$USER/AnalysisNotes/kpp-cosmics-2026-10
+
 # 2. combined reco + EventNtuple with CRV pulses, run 123680 (12 parallel chunks, about 2 min)
-scripts/combined_reco.sh kppwork $(python3 scripts/rawpath.py raw.mu2e.cosmics.kpp.123680_000001.art) out/run123680
+# outputs go to the data area (about 1.8 GB for this run)
+OUT=/exp/mu2e/data/users/$USER/kpp-cosmics-2026-10
+scripts/combined_reco.sh /exp/mu2e/app/users/$USER/kppwork $(python3 scripts/rawpath.py raw.mu2e.cosmics.kpp.123680_000001.art) $OUT/run123680
 
 # 3. calo-only reco + EventNtuple, run 123681 (21 parallel jobs, about 1 min)
-python3 scripts/rawpath.py --kpp-calo 123681 1 201 10 > calo_123681.txt
-scripts/calo_reco.sh kppwork calo_123681.txt out/run123681
+python3 scripts/rawpath.py --kpp-calo 123681 1 201 10 > $OUT/calo_123681.txt
+scripts/calo_reco.sh /exp/mu2e/app/users/$USER/kppwork $OUT/calo_123681.txt $OUT/run123681
 
-# 4. plots and numbers (new shell)
+# 4. plots and numbers (new shell, in the note folder)
 source /cvmfs/mu2e.opensciencegrid.org/bin/pyenv.sh ana
-python kpp_cosmic_plots.py out/run123680/nts.root -o plots/run123680
-python kpp_cosmic_plots.py out/run123681/nts.root -o plots/run123681
+cd /exp/mu2e/app/users/$USER/AnalysisNotes/kpp-cosmics-2026-10
+OUT=/exp/mu2e/data/users/$USER/kpp-cosmics-2026-10
+python kpp_cosmic_plots.py $OUT/run123680/nts.root -o plots/run123680
+python kpp_cosmic_plots.py $OUT/run123681/nts.root -o plots/run123681
 ```
 
 The scripts fail loudly if any job fails. Each chunk or file keeps its `reco.log` and `nts.log`. `kpp_cosmic_plots.py` runs only the sections its input branches allow and lists what it skipped.
